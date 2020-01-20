@@ -26,11 +26,11 @@ class RetryUtilityTest {
 
     @Test
     public void test_retryable_callable() {
-        String result = RetryUtility.retry(() -> "Some Retryable Method", new IOException(), "An error has occurred");
+        String result = RetryUtility.retry(() -> "Something retryable", new IOException(), "An error has occurred");
         System.out.println(result);
 
-        List<String> results = RetryUtility.retry(() -> Arrays.asList("hi1", "hi2", "hi3"), new IOException(), "An error has occurred");
-        results.forEach(str -> System.out.println("List : " + str));
+        List<String> results = RetryUtility.retry(() -> Arrays.asList("Test1", "Test2", "Test3"), new IOException(), "An error has occurred");
+        results.forEach(str -> System.out.println("List: " + str));
     }
 
     @Test
