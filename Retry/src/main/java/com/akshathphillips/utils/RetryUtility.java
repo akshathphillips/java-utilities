@@ -5,6 +5,9 @@ import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.Callable;
 
+/**
+ * Allows a piece of code to be retried the amount of times as listed in the RETRY constant
+ */
 public class RetryUtility {
     private static final int RETRY = 3;
     private static final long DELAY = 1000L;
